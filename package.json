@@ -1,0 +1,36 @@
+{
+	"name": "demos",
+	"version": "0.1.0",
+	"private": true,
+	"engines": 
+		{"node": ">=7.7",
+		 "npm": ">=4.3"
+		},
+	"comment_only": "// npm-check-updates -u",
+	"scripts": {
+		"start": "node index"
+	},
+	"dependencies": { 
+		"express": ">=4.15"
+		, "cors": ">=2.8"
+		, "compression": ">=1.6"
+		, "body-parser": ">=1.17"
+		, "is_js": ">=0.9"
+		, "now-logs": ">=0.0.7"
+		, "bugsnag": ">=1.9"
+
+		, "useragent": ">=2.1"
+		, "riot": ">=3.3"
+		, "cheerio": ">=0.22"
+		, "jsonwebtoken": ">= 7.2"
+		, "node-fetch": ">=1.6"
+
+		,"random-js": ">=1.0"
+		, "mailgun-js": ">=0.8"
+		,"@google-cloud/datastore": ">=0.7"
+		,"node-cache": ">=4.1"
+		,"markdown-it": ">=8.3"
+
+
+	}
+}
