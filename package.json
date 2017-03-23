@@ -1,15 +1,21 @@
 {
 	"name": "topseed-util",
 	"version": "17.03.21",
-	"private": true,
+	"main": "Util.js",
+	"description": "Used in topseed projects",
+	"author": "topseed",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/topseed/topseed"
+	},
+	"keywords": [
+		"topseed"
+	],
 	"engines": 
 		{"node": ">=7.4",
 		 "npm": ">=4.1"
 		},
-	"comment_only": "// npm-check-updates -u",
-	"scripts": {
-		"start": "node index"
-	},
 	"dependencies": { 
 
 		 "is_js": ">=0.9"

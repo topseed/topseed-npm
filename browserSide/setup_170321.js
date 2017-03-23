@@ -26,47 +26,41 @@ var A = { // page static actions 'object'
 }//
 
 //> ====================================================================
-/*ex pg:
+/*ex pg use:
 function init() {
-	riot.compile(function(){ // make component, and wait for it
-		...
-	})
+	...
 }//()
 A.onLoaded(init)
 */
 
 // load <====================================================================
-console.log ('pgA v17.03a')
-//console.log(bowser.mobile)
-
-if(bowser.msie) {
-	console.log('you got ie')
-}
-
-if ( !bowser.blink) {//detect
-	console.log('not new chrome')
-	loadNotChrome()
-} else {
-	console.log('is chrome')
-	loadjs.done('dependencyNotChrome')
-}
-
-function loadNotChrome() {
+loadjs([ // load bowser
+	'https://www.masons-foundation.org/_js/libJs/bowser.min.js'
+], { success: function(){
+		console.log('bowser')
+		if(bowser.msie) {
+			console.log('you got ie, not edge')
+			loadIE()
+		} else {
+			loadjs.done('dependencyIE')
+		}
+	}, async: false
+})
+function loadIE() { //load fetch, since not in IE
 	loadjs([
 		'//cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js'
 		], { success: function(){
-			console.log('loaded dependencyNotChrome')
-			loadjs.done('dependencyNotChrome')
+			console.log('loaded dependencyIE')
+			loadjs.done('dependencyIE')
 		}, async: false
 	})
 }
 
 loadjs([
-	//,'/_js/libJs/bowser.min.js'
-	'//cdn.jsdelivr.net/jquery/3.2.0/jquery.min.js'
-	,'https://www.masons-foundation.org/_js/libJs/jquery.smoothState.js'
-	,'//cdn.jsdelivr.net/riot/3.3.2/riot+compiler.min.js'
-
+	 '//cdn.jsdelivr.net/jquery/3.2.0/jquery.min.js'
+	,'//d2wy8f7a9ursnm.cloudfront.net/bugsnag-3.min.js'
+	,'//cdn.jsdelivr.net/js-signals/1.0.0/signals.min.js'
+	,'https://www.masons-foundation.org/_js/libJs/js.cookie.min.js'
 	], { success: function(){
 		console.log('key libs')
 		loadjs.done('keyLibs')
@@ -74,7 +68,7 @@ loadjs([
 })
 // foo <====================================================================
 
-function preLImg(arg) {
+function preLImg(arg) { // start loading an image so browser has it
 	var imag = new Image()
 	imag.src = arg
 }

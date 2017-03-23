@@ -32,8 +32,8 @@ cacheNone(res) {
 	res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate')
 }
 
-cacheQuick(res) {//3hr, 2 minutes
-	res.header('Cache-Control', 'public, s-maxage=10800, max-age=120, proxy-revalidate')
+cacheQuick(res) {//3hr, 30 seconds
+	res.header('Cache-Control', 'public, s-maxage=10800, max-age=30, proxy-revalidate')
 }
 
 cacheLong(res) {//23 hours, 1hr
