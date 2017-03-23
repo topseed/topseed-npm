@@ -1,30 +1,5 @@
 'use strict'
-var A = { // page static actions 'object'
-	stateA : new signals.Signal()
-	,inAction : false // set to true when user acts; false when effect is done
-	,loaded : false
-	,PRE : '_pre-action'
-	,PAGE : '_new-page'
-	,LOADED : '_loaded'
-
-	,act: function (arg) {
-		A.stateA.dispatch(arg, window.location)
-	}//()
-
-	,onLoaded: function(cb) { // on loading + riot compile
-		if(A.loaded) {
-			cb()
-		} //fi
-		else {
-			A.stateA.addOnce(function(arg1, arg2) {
-				console.log(arg1)
-				cb()
-				return false
-			})//added once
-		}//else
-	}//()
-}//
-
+var A = {  }
 //> ====================================================================
 /*ex pg use:
 function init() {
@@ -35,7 +10,7 @@ A.onLoaded(init)
 
 // load <====================================================================
 loadjs([ // load bowser
-	'//cdn.rawgit.com/topseed/topseed-npm/master/browserSide/bowser.min.js'
+	'https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/bowser.min.js'
 ], { success: function(){
 		console.log('bowser')
 		if(bowser.msie) {
@@ -60,8 +35,34 @@ loadjs([
 	 '//cdn.jsdelivr.net/jquery/3.2.0/jquery.min.js'
 	,'//d2wy8f7a9ursnm.cloudfront.net/bugsnag-3.min.js'
 	,'//cdn.jsdelivr.net/js-signals/1.0.0/signals.min.js'
-	,'//cdn.rawgit.com/topseed/topseed-npm/master/browserSide/js.cookie.min.js'
+	,'https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/js.cookie.min.js'
 	], { success: function(){
+		A= { 
+			stateA : new signals.Signal()
+			,inAction : false // set to true when user acts; false when effect is done
+			,loaded : false
+			,PRE : '_pre-action'
+			,PAGE : '_new-page'
+			,LOADED : '_loaded'
+
+			,act: function (arg) {
+				A.stateA.dispatch(arg, window.location)
+			}//()
+
+			,onLoaded: function(cb) { // on loading + riot compile
+				if(A.loaded) {
+					cb()
+				} //fi
+			else {
+				A.stateA.addOnce(function(arg1, arg2) {
+					console.log(arg1)
+					cb()
+					return false
+				})//added once
+			}//else
+			}//()
+		}//
+	
 		console.log('key libs')
 		loadjs.done('keyLibs')
 	}, async: false
