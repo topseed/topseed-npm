@@ -62,7 +62,7 @@ loadjs([
 			}//()
 		}//
 	
-		console.log('setup libs loaded')
+		console.log('setup libs loaded!')
 		loadjs.done('keyLibs')
 	}, async: false
 })

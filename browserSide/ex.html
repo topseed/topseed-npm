@@ -10,13 +10,13 @@
 
 		loadjs.ready(['dependencyIE', 'keyLibs'], {// loaded setup
 			success: function(){
-			console.log('loading app libs' )
+			console.log('loading app libs ex:' )
 			loadjs([
 				'https://www.masons-foundation.org/_js/libJs/jquery.smoothState.js',
 				'//cdn.jsdelivr.net/riot/3.3.2/riot+compiler.min.js'
 
 				], { success: function(){
-					console.log('loaded libs')
+					console.log('loaded libs!')
 					startApp()
 				}
 			})//loadjs
@@ -25,7 +25,7 @@
 
 	//====================================================================
 	function startApp(){
-		console.log('starting app')
+		console.log('starting app:')
 	}
 	</script>
 </body>
