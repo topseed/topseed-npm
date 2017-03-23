@@ -35,7 +35,7 @@ A.onLoaded(init)
 
 // load <====================================================================
 loadjs([ // load bowser
-	'https://www.masons-foundation.org/_js/libJs/bowser.min.js'
+	'//cdn.rawgit.com/topseed/topseed-npm/master/browserSide/bowser.min.js'
 ], { success: function(){
 		console.log('bowser')
 		if(bowser.msie) {
@@ -60,7 +60,7 @@ loadjs([
 	 '//cdn.jsdelivr.net/jquery/3.2.0/jquery.min.js'
 	,'//d2wy8f7a9ursnm.cloudfront.net/bugsnag-3.min.js'
 	,'//cdn.jsdelivr.net/js-signals/1.0.0/signals.min.js'
-	,'https://www.masons-foundation.org/_js/libJs/js.cookie.min.js'
+	,'//cdn.rawgit.com/topseed/topseed-npm/master/browserSide/js.cookie.min.js'
 	], { success: function(){
 		console.log('key libs')
 		loadjs.done('keyLibs')

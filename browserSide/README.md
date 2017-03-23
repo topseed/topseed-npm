@@ -6,7 +6,7 @@ You can use it as well.
 Use from CDN as, make sure you get the latest version number, older versions are deprecated quickly:
 - <https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/setup_170321.js>
 
-You'll need 'https://www.masons-foundation.org/_js/libJs/loadjs.min.js' loaded ahead.
+You'll need 'deps/loadjs.min.js' loaded ahead.
 
 Features:
 
