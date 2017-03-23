@@ -3,10 +3,6 @@
 When using .js in front end creation or development, some pattern implementations are commonly useful. This is ~450 bytes .js file used by topseed projects and we are always looking for things to remove from here. 
 
 You can use it as well.
-Use from CDN as, make sure you get the latest version number, older versions are deprecated quickly:
-- <https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/setup_170321.js>
-
-You'll need 'deps/loadjs.min.js' loaded ahead.
 
 Features:
 
@@ -32,3 +28,9 @@ Above 2 allow for cross platform native mobile ( one example is cordova or build
 
 Version naming is YY.MM.DD
 For older release view git history.
+
+
+Use from CDN as, make sure you get the latest version number, older versions are deprecated quickly:
+- <https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/setup_170321.js>
+
+You'll need 'deps/loadjs.min.js' loaded ahead. Look at the <ex.html> here.
