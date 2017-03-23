@@ -1,21 +1,18 @@
 {
-	"name": "demos",
-	"version": "0.1.0",
+	"name": "topseed-util",
+	"version": "17.03.21",
 	"private": true,
 	"engines": 
-		{"node": ">=7.7",
-		 "npm": ">=4.3"
+		{"node": ">=7.4",
+		 "npm": ">=4.1"
 		},
 	"comment_only": "// npm-check-updates -u",
 	"scripts": {
 		"start": "node index"
 	},
 	"dependencies": { 
-		"express": ">=4.15"
-		, "cors": ">=2.8"
-		, "compression": ">=1.6"
-		, "body-parser": ">=1.17"
-		, "is_js": ">=0.9"
+
+		 "is_js": ">=0.9"
 		, "now-logs": ">=0.0.7"
 		, "bugsnag": ">=1.9"
 
@@ -26,11 +23,8 @@
 		, "node-fetch": ">=1.6"
 
 		,"random-js": ">=1.0"
-		, "mailgun-js": ">=0.8"
-		,"@google-cloud/datastore": ">=0.7"
 		,"node-cache": ">=4.1"
 		,"markdown-it": ">=8.3"
-
 
 	}
 }
