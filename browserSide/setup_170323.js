@@ -1,6 +1,30 @@
 'use strict'
-console.log('deprecated')
-var A = {  }
+var A = 
+	{ 
+	stateA : {}
+	,inAction : false // set to true when user acts; false when effect is done
+	,loaded : false
+	,PRE : '_pre-action'
+	,PAGE : '_new-page'
+	,LOADED : '_loaded'
+
+	,act: function (arg) {
+		A.stateA.dispatch(arg, window.location)
+	}//()
+
+	,onLoaded: function(cb) { // on loading + riot compile
+		if(A.loaded) {
+			cb()
+		} //fi
+	else {
+		A.stateA.addOnce(function(arg1, arg2) {
+			console.log(arg1)
+			cb()
+			return false
+		})//added once
+	}//else
+	}//()
+}//
 //> ====================================================================
 /*ex pg use:
 function init() {
@@ -37,33 +61,9 @@ loadjs([
 	,'//cdn.jsdelivr.net/js-signals/1.0.0/signals.min.js'
 	,'https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/deps/js.cookie.min.js'
 	], { success: function(){
-		A= { 
-			stateA : new signals.Signal()
-			,inAction : false // set to true when user acts; false when effect is done
-			,loaded : false
-			,PRE : '_pre-action'
-			,PAGE : '_new-page'
-			,LOADED : '_loaded'
+		A.stateA= new signals.Signal()
 
-			,act: function (arg) {
-				A.stateA.dispatch(arg, window.location)
-			}//()
-
-			,onLoaded: function(cb) { // on loading + riot compile
-				if(A.loaded) {
-					cb()
-				} //fi
-			else {
-				A.stateA.addOnce(function(arg1, arg2) {
-					console.log(arg1)
-					cb()
-					return false
-				})//added once
-			}//else
-			}//()
-		}//
-	
-		console.log('setup libs loaded')
+		console.log('setup libs loaded!')
 		loadjs.done('keyLibs')
 	}, async: false
 })
