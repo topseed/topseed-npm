@@ -20,17 +20,16 @@ Above 2 allow for cross platform native mobile ( one example is cordova or build
 
 - .js framework agnostic, but I like RIOT
 
-- depends on muicss/loadjs; load before
+- depends on muicss/loadjs and js signals; load before
 
-- loads and uses js-cookie, signals and bowser from CDN
+- loads and uses js-cookie and bowser from CDN
 
 - loads bugsnag and latest jQuery v3.x.
 
 Version naming is YY.MM.DD
 For older release view git history.
 
-
 Use from CDN as, make sure you get the latest version number, older versions are deprecated quickly:
 - <https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/setup_170321.js>
 
-You'll need 'deps/loadjs.min.js' loaded ahead. Look at the <ex.html> here.
+Look at the * ex.html * here of how it is loaded in head.
