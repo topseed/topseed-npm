@@ -27,10 +27,10 @@ var A =
 }//
 //> ====================================================================
 /*ex pg use:
-function init() {
-	...
-}//()
-A.onLoaded(init)
+	function init() {
+		...
+	}//()
+	A.onLoaded(init)
 */
 
 // load <====================================================================
@@ -67,7 +67,7 @@ loadjs([
 })
 // foo <====================================================================
 
-function preLImg(arg) { // start loading an image so browser has it
+function preLImg(arg) { // start loading an image so browser has it, for example in timeout of main page
 	var imag = new Image()
 	imag.src = arg
 }
@@ -75,13 +75,13 @@ function preLImg(arg) { // start loading an image so browser has it
 var X = { // XHR for SPA
 	clearCookies: function () {
 		var cookies = document.cookie.split(';')
-		for (var i = 0; i < cookies.length; i++){   
+		for (var i = 0; i < cookies.length; i++){
 			var spcook =  cookies[i].split('=')
 			document.cookie = spcook[0] + '=;expires=Thu, 21 Sep 1979 00:00:01 UTC;'
 		}
 	}//()
 
-	,DT_ : 'DT_'
+	,DT_ : 'DT_' 
 	,writeC: function(nam, str) {
 		var jstr = JSON.stringify(str)
 		var exp = 1/12  // 2 hours
@@ -117,6 +117,19 @@ var X = { // XHR for SPA
 			})
 	}//_()
 }//
+//> ====================================================================
+/*
+in main.js var ROOT = 'http://localhost:8080/'
+ex fetch use:
+	X.fetch(ROOT, 'RM/signUp', dat)
+		.then(function(value) { 
+			console.log('back')
+			//console.log(JSON.stringify(value))
+			...
 
-
+	}).catch(function(err) { //error
+		console.error('err')
+		console.error(err)
+	})//fetch()
+*/
 
