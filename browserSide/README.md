@@ -60,7 +60,6 @@ Then in your script something like:
 	function startApp(){
 		console.log('starting app:')
 	}
-	</script>
 
 And then you can use it on page like:
 
