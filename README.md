@@ -1,15 +1,15 @@
-# topseed Util 
+# Topseed Util 
 
 <http://npmjs.com/package/topseed-util>
 
 In order to make node code more readable, sometimes you need to remove the noise.
-So here we have some util functions, used by topseed projects. 
+So here we have some utility functions, used by Topseed projects. 
 
 You can use it too. In package.json:
 
-	"topseed-util": ">=17.03"
+	"topseed-util": ">=17.04"
 
-then in code:
+Then, in JavaScript:
 
 	const Util = require('topseed-util')
 	const U = new Util() 
