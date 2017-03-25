@@ -27,10 +27,10 @@ var A =
 }//
 //> ====================================================================
 /*ex pg use:
-function init() {
-	...
-}//()
-A.onLoaded(init)
+	function init() {
+		...
+	}//()
+	A.onLoaded(init)
 */
 
 // load <====================================================================
@@ -117,6 +117,19 @@ var X = { // XHR for SPA
 			})
 	}//_()
 }//
+//> ====================================================================
+/*
+in main.js var ROOT = 'http://localhost:8080/'
+ex fetch use:
+	X.fetch(ROOT, 'RM/signUp', dat)
+		.then(function(value) { 
+			console.log('back')
+			//console.log(JSON.stringify(value))
+			...
 
-
+	}).catch(function(err) { //error
+		console.error('err')
+		console.error(err)
+	})//fetch()
+*/
 

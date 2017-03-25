@@ -33,3 +33,39 @@ Use from CDN as, make sure you get the latest version number, older versions are
 - <https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/setup_170321.js>
 
 Look at the * ex.html * here of how it is loaded in head.
+
+	<head>
+		<script src="https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/deps/loadjs.min.js" type="text/javascript"></script>
+		<script src="//cdn.jsdelivr.net/js-signals/1.0.0/signals.min.js" type="text/javascript"></script>
+		<script src="https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/setup_170324.js" type="text/javascript"></script>
+	</head>
+
+Then in your script something like:
+
+	'use strict'
+	loadjs.ready(['dependencyIE', 'keyLibs'], {// loaded setup
+		success: function(){
+		console.log('loading app libs ex:' )
+		loadjs([
+			'https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/deps/jquery.smoothState.js',
+			'//cdn.jsdelivr.net/riot/3.3.2/riot+compiler.min.js'
+
+			], { success: function(){
+				console.log('loaded libs!')
+				startApp()
+			}
+		})//loadjs
+		}//suc
+	})
+	function startApp(){
+		console.log('starting app:')
+	}
+	</script>
+
+And then you can use it on page like:
+
+	function init() {
+		...
+	}
+	A.onLoaded(init)
+
