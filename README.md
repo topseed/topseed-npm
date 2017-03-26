@@ -9,7 +9,7 @@ You can use it too. In package.json:
 
 	"topseed-util": ">=17.04"
 
-Then, in JavaScript:
+Then, in Node:
 
 	const Util = require('topseed-util')
 	const U = new Util() 
