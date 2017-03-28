@@ -1,6 +1,6 @@
 {
 	"name": "topseed-util",
-	"version": "17.04.01",
+	"version": "1.0.1",
 	"main": "Util.js",
 	"description": "Used in topseed projects",
 	"author": "topseed",
