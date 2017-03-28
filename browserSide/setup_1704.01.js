@@ -1,4 +1,5 @@
 'use strict'
+console.log('deprecated')
 var A = 
 	{ 
 	stateA: new signals.Signal()	

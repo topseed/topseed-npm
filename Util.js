@@ -5,6 +5,8 @@ const crypto = require('crypto')
 const random = require('random-js')()
 // ///////////////////////////////
 
+const _slash = '/'
+
 //var agent = useragent.lookup(req.headers['user-agent'])
 class Util {
 
@@ -18,6 +20,7 @@ crypt(str, salt) {
 genRandom(low, hi){
 	return random.integer(low, hi)
 }
+
 
 getDt() {
 	return new Date()
@@ -47,14 +50,30 @@ err (msg, res) {
 	res.status(400).end()
 }
 
-getPath(req) {
+endsWithSlash(str ) {
+	if (isj.endWith(str,_slash)) 
+		return str
+	return str+_slash
+}
+
+ifError(err, msg, res) {
+	if (err)  {
+		console.log(msg+': ' + err)
+		res.redirect('/index.html')// error - go home
+		res.end()
+		return true
+	} else return false
+}
+
+getPath(ROOT, req) {
 	let path = req.path
-	path = req.baseUrl + path
+	if (isj.not.existy(path)) path = ''
+	path = ROOT + req.baseUrl + path//***** */
 	//console.log(path)
 
 	path = path.replace('undefined/','')
 	path = path.replace('undefined','')
-	path = this._endsWithSlash(path)
+	path = this.endsWithSlash(path)
 	return path
 }
 
@@ -66,12 +85,6 @@ isW(req) { // should we serve SPA or mobile/AMP?
 	return false
 }
 
- _endsWithSlash(str ) {
-	const _slash = '/'
-	if(isj.endWith(str,_slash)) 
-		return str.slice(0, -1)
-	return str
-}
 
 replace(target, search, replacement) {
 	return target.split(search).join(replacement)
