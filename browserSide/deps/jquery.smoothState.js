@@ -1,6 +1,9 @@
 /*
  * smoothState.js is jQuery plugin that progressively enhances
  * page loads to behave more like a single-page application.
+
+ v17.03
+
  *
  * @author  Miguel Ángel Pérez   reachme@miguel-perez.com
  * @see     http://smoothstate.com
