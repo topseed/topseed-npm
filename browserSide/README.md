@@ -30,14 +30,14 @@ Version naming is x.y.z
 For older release view git history.
 
 Use from CDN as, make sure you get the latest version number, older versions are deprecated quickly:
-- <https://cdn.rawgit.com/topseed/topseed-npm/master/v1/setup_1.0.2.js>
+- <https://cdn.rawgit.com/topseed/topseed-npm/master/v1/setup-1.0.2.js>
 
 Look at the * ex.html * here of how it is loaded in head.
 
 	<head>
 		<script src="https://cdn.rawgit.com/topseed/topseed-npm/master/v1/deps/loadjs.min.js" type="text/javascript"></script>
 		<script src="//cdn.jsdelivr.net/js-signals/1.0.0/signals.min.js" type="text/javascript"></script>
-		<script src="https://cdn.rawgit.com/topseed/topseed-npm/master/v1/setup_1.0.2.js" type="text/javascript"></script>
+		<script src="https://cdn.rawgit.com/topseed/topseed-npm/master/v1/setup-1.0.2.js" type="text/javascript"></script>
 	</head>
 
 Then in your script something like:
