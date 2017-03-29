@@ -18,7 +18,7 @@ Above 2 allow for cross platform native mobile ( one example is cordova or build
 
 - practical derivative implementation of Flux
 
-- .js framework agnostic, but I like RIOT
+- .js framework agnostic, but we like RIOT
 
 - depends on muicss/loadjs and js signals; load before
 
@@ -26,18 +26,18 @@ Above 2 allow for cross platform native mobile ( one example is cordova or build
 
 - loads bugsnag and latest jQuery v3.x.
 
-Version naming is YY.MM.DD
+Version naming is x.y.z
 For older release view git history.
 
 Use from CDN as, make sure you get the latest version number, older versions are deprecated quickly:
-- <https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/setup_170321.js>
+- <https://cdn.rawgit.com/topseed/topseed-npm/master/v1/setup_1.0.2.js>
 
 Look at the * ex.html * here of how it is loaded in head.
 
 	<head>
-		<script src="https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/deps/loadjs.min.js" type="text/javascript"></script>
+		<script src="https://cdn.rawgit.com/topseed/topseed-npm/master/v1/deps/loadjs.min.js" type="text/javascript"></script>
 		<script src="//cdn.jsdelivr.net/js-signals/1.0.0/signals.min.js" type="text/javascript"></script>
-		<script src="https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/setup_170324.js" type="text/javascript"></script>
+		<script src="https://cdn.rawgit.com/topseed/topseed-npm/master/v1/setup_1.0.2.js" type="text/javascript"></script>
 	</head>
 
 Then in your script something like:
@@ -47,7 +47,7 @@ Then in your script something like:
 		success: function(){
 		console.log('loading app libs ex:' )
 		loadjs([
-			'https://cdn.rawgit.com/topseed/topseed-npm/master/browserSide/deps/jquery.smoothState.js',
+			'https://cdn.rawgit.com/topseed/topseed-npm/master/v1/deps/jquery.smoothState.js',
 			'//cdn.jsdelivr.net/riot/3.3.2/riot+compiler.min.js'
 
 			], { success: function(){
