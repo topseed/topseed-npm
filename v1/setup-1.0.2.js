@@ -36,15 +36,16 @@ var A =
 // load <====================================================================
 loadjs([ // load bowser
 	'https://cdn.rawgit.com/topseed/topseed-npm/master/v1/deps/bowser.min.js'
-], { success: function(){
-		if(bowser.msie) {
-			console.log('you got ie, not edge')
-			loadIE()
-		} else {
-			loadjs.done('dependencyIE')
-		}
+	], { success: function(){
+			if(bowser.msie) {
+				console.log('you got ie, not edge')
+				loadIE()
+			} else {
+				loadjs.done('dependencyIE')
+			}
 	}, async: false
 })
+
 function loadIE() { //load fetch, since not in IE
 	loadjs([
 		'//cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js'
@@ -60,7 +61,6 @@ loadjs([
 	,'//d2wy8f7a9ursnm.cloudfront.net/bugsnag-3.min.js'
 	,'https://cdn.rawgit.com/topseed/topseed-npm/master/v1/deps/js.cookie.min.js'
 	], { success: function(){
-
 		console.log('setup libs loaded!')
 		loadjs.done('keyLibs')
 	}, async: false
@@ -116,7 +116,7 @@ var X = { // XHR for SPA
 				return (response.json())//,response.headers.get('X-JWT'))
 			})
 	}//_()
-}//
+}
 //> ====================================================================
 /*
 in main.js var ROOT = 'http://localhost:8080/'
