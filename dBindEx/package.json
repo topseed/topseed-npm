@@ -1,0 +1,21 @@
+{
+	"engines": 
+		{"node": ">=7.6",
+		 "npm": ">=4.1"
+		},
+	"scripts": {
+		"start": "node index"
+	},
+	"dependencies": { 
+		"express": ">=4.1"
+		, "compression": ">=1.6"
+		, "body-parser": ">=1.1"
+		, "useragent": ">=2.1"
+		, "scribe-js": ">=2.0"
+		, "debug": ">=2.6"
+		, "bugsnag": ">=1.9"
+		, "now-logs": ">=0.0.7"
+		, "topseed-util": "=1.0.6"
+
+	}
+}
