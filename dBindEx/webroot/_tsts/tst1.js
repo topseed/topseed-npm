@@ -4,10 +4,10 @@ QUnit.test( 'test: fetch()', function( assert ) {
 	loadjs([
 		'/_js/DSrv.js'
 		], { success: function(){
-			console.log('CSrv')
-			var done = assert.async()
 
+			var done = assert.async()
 			doTest(done)
+
 		}
 	})
 

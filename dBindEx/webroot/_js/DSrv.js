@@ -1,7 +1,9 @@
 'use strict'
 
-class BaseDSrv {
+console.log('DSrv')
 
+class BaseDSrv {
+			
 clearCookies() {
 	var cookies = document.cookie.split(';')
 	for (var i = 0; i < cookies.length; i++){
@@ -25,7 +27,7 @@ get XBASIC() { return  'X-BASIC'}
 
 get XJT() { return  'X-JWT'}
 
-fetch (ROOT_, url_, data_) {
+fetch(ROOT_, url_, data_) {
 	var xjt_ = Cookies.get(X.XJT)
 	var xb_  = Cookies.get(X.XBASIC)
 	console.log('fetching ', url_, xb_)
