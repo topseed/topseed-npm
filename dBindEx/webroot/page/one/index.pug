@@ -11,9 +11,16 @@ block main
 	p oh hi there
 
 	script.
-		function init() {
+		function load() {
+			loadjs([
+				'CSrv.js'
+				], { success: function(){
+					console.log('CSrv')
+				}
+			})
 		}
-		A.onLoaded(init)
+		A.onLoaded(load)
+
 
 block footer
 	include ../../_part/_footer
