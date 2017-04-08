@@ -48,7 +48,8 @@ loadjs([ // load bowser
 
 function loadIE() { //load fetch, since not in IE
 	loadjs([
-		'//cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js'
+		'//cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js',
+		'//cdn.jsdelivr.net/picturefill/3.0.3/picturefill.min.js'
 		], { success: function(){
 			console.log('loaded dependencyIE')
 			loadjs.done('dependencyIE')
