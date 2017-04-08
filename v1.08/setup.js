@@ -48,8 +48,8 @@ loadjs([ // load bowser
 
 function loadIE() { //load fetch, since not in IE
 	loadjs([
-		'//cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js',
-		'//cdn.jsdelivr.net/picturefill/3.0.3/picturefill.min.js'
+		 '//cdn.jsdelivr.net/fetch/2.0.1/fetch.min.js'
+		,'//cdn.jsdelivr.net/picturefill/3.0.3/picturefill.min.js'
 		], { success: function(){
 			console.log('loaded dependencyIE')
 			loadjs.done('dependencyIE')
@@ -59,7 +59,7 @@ function loadIE() { //load fetch, since not in IE
 
 loadjs([
 	 '//cdn.jsdelivr.net/jquery/3.2.0/jquery.min.js'
-	,'//d2wy8f7a9ursnm.cloudfront.net/bugsnag-3.min.js'
+	 //,'//d2wy8f7a9ursnm.cloudfront.net/bugsnag-3.min.js'
 	,'https://cdn.rawgit.com/topseed/topseed-npm/master/v1.08/deps/js.cookie.min.js'
 	], { success: function(){
 		console.log('setup libs loaded!')
