@@ -47,19 +47,14 @@ cacheLong(res) {//23 hours, 1hr
 	res.header('Cache-Control', 'public, s-maxage=82800, max-age=3600')
 }
 
-err (msg, res) {
+err(msg, res) {
 	console.log('U.err')
 	console.error(msg)
 	res.statusMessage = msg
 	res.status(400).end()
 }
 
-endsWithSlash(str ) {
-	if (isj.endWith(str,_slash)) 
-		return str
-	return str+_slash
-}
-
+/*
 ifError(err, msg, res) {
 	if (err)  {
 		console.log(msg+': ' + err)
@@ -68,11 +63,17 @@ ifError(err, msg, res) {
 		return true
 	} else return false
 }
-
-getPath(ROOT, req) {
+*/
+get _slash () {return  '/'}
+endsWithSlash(str ) {
+	if (isj.endWith(str, this._slash)) 
+		return str
+	return str+_slash
+}
+getPath(req) {
 	let path = req.path
 	if (isj.not.existy(path)) path = ''
-	path = ROOT + req.baseUrl + path//***** */
+	path = ROOT + req.baseUrl + path
 	//console.log(path)
 
 	path = path.replace('undefined/','')
