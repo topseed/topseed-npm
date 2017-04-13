@@ -1,4 +1,7 @@
 'use strict'
+
+var _loadStarted = new Date().getTime()
+
 var A = 
 	{ 
 	stateA: new signals.Signal()	
