@@ -43,8 +43,8 @@ cacheQuick(res) {//3hr, 30 seconds
 	res.header('Cache-Control', 'public, s-maxage=10800, max-age=30, proxy-revalidate')
 }
 
-cacheLong(res) {//23 hours, 1hr
-	res.header('Cache-Control', 'public, s-maxage=82800, max-age=3600')
+cacheLong(res) {//23 hours, 2 minutes
+	res.header('Cache-Control', 'public, s-maxage=82800, max-age=120')
 }
 
 err(msg, res) {
