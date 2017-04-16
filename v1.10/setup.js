@@ -9,7 +9,7 @@ var A =
 	,loaded : false
 	,PRE : '_pre-action'
 	,PAGE : '_new-page'
-	,LOADED : '_loaded'
+	//,LOADED : '_loaded'
 
 	,act: function (arg) {
 		A.stateA.dispatch(arg, window.location)
@@ -26,6 +26,7 @@ var A =
 			return false
 		})//added once
 	}//else
+
 	}//()
 }//
 //> ====================================================================
