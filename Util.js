@@ -70,10 +70,10 @@ endsWithSlash(str ) {
 		return str
 	return str+_slash
 }
-getPath(req) {
+getPath(rot, req) {
 	let path = req.path
 	if (isj.not.existy(path)) path = ''
-	path = ROOT + req.baseUrl + path
+	path = rot + req.baseUrl + path
 	//console.log(path)
 
 	path = path.replace('undefined/','')
