@@ -1,6 +1,6 @@
 {
 	"name": "topseed-util"
-	,"version": "2.0.1"
+	,"version": "2.0.2"
 	,"main": "Util.js"
 	,"description": "Used in topseed projects"
 	,"author": "topseed"
@@ -18,19 +18,18 @@
 		, "cors": ">=2.8"
 		, "compression": ">=1.6"
 		, "body-parser": ">=1.1"
+		, "pug": ">=2.0.0-rc.2"
 
+		, "dot": ">=1.1"
 		, "is_js": ">=0.9"
 		, "flyd": ">=0.2.4"
-		, "riot": ">=3.4"
+
 		, "cheerio": ">=0.2"
 		, "moment": ">=2.1"
-		, "scribe-js": ">=2.0"
-		, "debug": ">=2.6"
 		, "node-fetch": ">=1.6"
 		, "markdown-it": ">=8.3"
 
 		, "random-js": ">=1.0"
-		, "node-cache": ">=4.1"
 
 	}
 }
