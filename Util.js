@@ -27,7 +27,6 @@ class Util {
 	}
 
 	getDt() {
-		console.log('deprecated')
 		return new Date()
 	}
 
