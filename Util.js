@@ -79,12 +79,11 @@ class Util {
 		path = rot + req.baseUrl + path
 		//console.log(path)
 
-		path = path.replace('undefined/','')
-		path = path.replace('undefined','')
+		path = this.replace(path,'undefined/','')
+		path = this.replace(path,'undefined','')
 		path = this.endsWithSlash(path)
 		return path
 	}
-
 
 	replace(target, search, replacement) {
 		return target.split(search).join(replacement)
