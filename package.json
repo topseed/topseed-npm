@@ -1,6 +1,6 @@
 {
 	"name": "topseed-util"
-	,"version": "20.1.0"
+	,"version": "20.2.0"
 	,"main": "Util.js"
 	,"description": "Used in topseed projects"
 	,"author": "topseed"
@@ -14,7 +14,6 @@
 	, "engines": { "npm" : ">=5", "node": ">=8" }
 	, "dependencies": { 
 		"express": ">=4.1"
-		, "useragent": ">=2.1"
 		, "cors": ">=2.8"
 		, "compression": ">=1.6"
 		, "body-parser": ">=1.1"

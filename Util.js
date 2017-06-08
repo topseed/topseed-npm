@@ -1,7 +1,6 @@
 'use strict'
 
 const isj = require('is_js')
-const useragent = require('useragent')
 const crypto = require('crypto')
 const random = require('random-js')()
 // ///////////////////////////////
@@ -9,11 +8,6 @@ const random = require('random-js')()
 const _slash = '/'
 
 class Util {
-
-	getAgent(req) {
-		var agent = useragent.lookup(req.headers['user-agent'])
-		return agent.toAgent()
-	}
 
 	crypt(str, salt) {
 		let hash = crypto.createHmac('sha512', salt)
