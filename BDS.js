@@ -2,7 +2,7 @@
 console.log('BDS')
 var BDS = Class.extend({ //IE11-compatible base class for Data Access Object
 
-	, _fetch: function(fetch_,ROOT_, url_, data_) { //static
+	 _fetch: function(fetch_,ROOT_, url_, data_) { //static
 		//var xjt_ = Cookies.get(BDS.XJT)
 		//var xb_  = Cookies.get(BDS.XBASIC)
 		console.log('fetching ', url_)

@@ -1,6 +1,6 @@
 var BLX = Class.extend({ //IE11-compatible testable 'middle layer' Page Business base class for component communication, ds/fetch, FRP and such. 
 
-	init: function(ds) {
+	init: function(ds) { //ds should handdle all ds for that page
 		this._ds = ds
 		this._streams= {} 	//loosely coupled
 		this.regObserver('TT', TT.smoothPg)//page stream
