@@ -97,14 +97,14 @@ exists(requestedResource) {
 }
 
 getPug(pgPath) { //pug
-	const requestedResource = U.replace(pgPath, '.html', '.pug')
+	const requestedResource = this.replace(pgPath, '.html', '.pug')
 	const h = pug.renderFile(requestedResource, pug_options)
 	return h
 }
 
 // SSR ###################### 
 getAsDoc(pgPath) { //pug
-	const requestedResource = U.replace(pgPath, '.html', '.pug')
+	const requestedResource = this.replace(pgPath, '.html', '.pug')
 	const h = pug.renderFile(requestedResource, pug_options)
 	const $ = cheerio.load(h) // load in the HTML into cheerio
 	return $
