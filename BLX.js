@@ -8,7 +8,15 @@
 var initializingClass = false, fnTest = /xyz/.test(function(){xyz;}) ? /\b_super\b/ : /.*/;
 
 // The base Class implementation 
-this.Class = function(){}
+var Class = function(){} // node
+/*if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+	var Class = function(){} // node
+	console.log('node', 'classs.js')
+}
+else {
+	this.Class = function(){} //browser
+	console.log('browser')
+}*/
 
 // Create a new Class that inherits from this class
 Class.extend = function(prop) {
