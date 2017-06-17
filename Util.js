@@ -3,9 +3,17 @@
 const isj = require('is_js')
 const crypto = require('crypto')
 const random = require('random-js')()
+
+const pug = require('pug')
+const doT = require('dot')
+const cheerio = require('cheerio')
 // ///////////////////////////////
 
 const _slash = '/'
+
+const pug_options = {}
+pug_options.pretty = true
+
 
 class Util {
 
@@ -83,5 +91,18 @@ class Util {
 		return target.split(search).join(replacement)
 	}//()
 
+// SSR ###################### 
+getAsDoc(requestedResource) { //pug
+	const h = pug.renderFile(requestedResource, pug_options)
+	const $ = cheerio.load(h) // load in the HTML into cheerio
+	return $
+}
+
+dBind(tpl, data) { // doT
+	const tpl1Foo = doT.template(tpl)
+	const v = tpl1Foo(data)
+	console.log(v)
+	return v
+}
 }//class
 module.exports = Util

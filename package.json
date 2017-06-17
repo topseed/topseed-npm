@@ -1,6 +1,6 @@
 {
 	"name": "topseed-util"
-	,"version": "20.2.0"
+	,"version": "20.4.0"
 	,"main": "Util.js"
 	,"description": "Used in topseed projects"
 	,"author": "topseed"
@@ -25,8 +25,6 @@
 
 		, "cheerio": ">=0.2"
 		, "moment": ">=2.1"
-		, "node-fetch": ">=1.6"
-		, "markdown-it": ">=8.3"
 
 		, "random-js": ">=1.0"
 
