@@ -72,7 +72,7 @@ Class.extend = function(prop) {
 }
 
 
-var BLB = Class.extend({ //IE11-compatible testable 'middle layer' Page Business base class for component communication, ds/fetch, FRP and such. 
+var PLX = Class.extend({ //IE11-compatible testable 'middle layer' Page Business base class for component communication, ds/fetch, FRP and such. 
 
 	init: function(ds) { //ds should handdle all ds for that page
 		this._ds = ds
@@ -123,4 +123,4 @@ var BLB = Class.extend({ //IE11-compatible testable 'middle layer' Page Business
 
 // for node:
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
-	module.exports = BLB //node
+	module.exports = PLX //node

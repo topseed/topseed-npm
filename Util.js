@@ -3,6 +3,7 @@
 const isj = require('is_js')
 const crypto = require('crypto')
 const random = require('random-js')()
+const fs = require('fs')
 
 const pug = require('pug')
 const doT = require('dot')
@@ -29,8 +30,11 @@ class Util {
 	}
 
 	getDt() {
-		return new Date()
+		return Date.now()
 	}
+	get ut() {//UTC/gmt time as long 
+		return Date.now()
+	}//()
 
 	getIP(req) {
 		return (req.headers['x-forwarded-for'] || '').split(',')[0] 
@@ -56,17 +60,13 @@ class Util {
 	}
 
 	randomString(len) {
-		var charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+		var charSet = 'ABCDEFGHJKMNPQRSTUVWXY3456789'
 		var randomString = ''
 		for (var i = 0; i < len; i++) {
 			var randomPoz = Math.floor(Math.random() * charSet.length)
 			randomString += charSet.substring(randomPoz,randomPoz+1)
 		}
 		return randomString
-	}//()
-
-	 get ut() {//UTC/gmt time as long 
-		return Date.now()
 	}//()
 
 	get _slash () {return  '/'}
@@ -91,8 +91,20 @@ class Util {
 		return target.split(search).join(replacement)
 	}//()
 
+
+exists(requestedResource) {
+	return fs.existsSync(requestedResource)
+}
+
+getPug(pgPath) { //pug
+	const requestedResource = U.replace(pgPath, '.html', '.pug')
+	const h = pug.renderFile(requestedResource, pug_options)
+	return h
+}
+
 // SSR ###################### 
-getAsDoc(requestedResource) { //pug
+getAsDoc(pgPath) { //pug
+	const requestedResource = U.replace(pgPath, '.html', '.pug')
 	const h = pug.renderFile(requestedResource, pug_options)
 	const $ = cheerio.load(h) // load in the HTML into cheerio
 	return $
