@@ -9,14 +9,6 @@ var initializingClass = false, fnTest = /xyz/.test(function(){xyz;}) ? /\b_super
 
 // The base Class implementation 
 var Class = function(){} // node
-/*if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-	var Class = function(){} // node
-	console.log('node', 'classs.js')
-}
-else {
-	this.Class = function(){} //browser
-	console.log('browser')
-}*/
 
 // Create a new Class that inherits from this class
 Class.extend = function(prop) {
@@ -80,13 +72,20 @@ Class.extend = function(prop) {
 }
 
 
-var BLX = Class.extend({ //IE11-compatible testable 'middle layer' Page Business base class for component communication, ds/fetch, FRP and such. 
+var BLB = Class.extend({ //IE11-compatible testable 'middle layer' Page Business base class for component communication, ds/fetch, FRP and such. 
 
 	init: function(ds) { //ds should handdle all ds for that page
 		this._ds = ds
 		this._streams= {} 	//loosely coupled
-		//this.regObserver('TT', TT.smoothPg)//page stream
-		//this._redirectFoo = TT.loadPg // for SSR it would be different
+		if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+			console.log('node', 'classs.js')
+		}
+		else {
+			this.regObserver('TT', TT.smoothPg)//page stream
+			this._redirectFoo = TT.loadPg // for SSR it would be different
+			console.log('browser')
+		}
+
 	}
 
 	, reg: function(key) {
