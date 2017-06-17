@@ -101,7 +101,6 @@ getAsDoc(requestedResource) { //pug
 dBind(tpl, data) { // doT
 	const tpl1Foo = doT.template(tpl)
 	const v = tpl1Foo(data)
-	console.log(v)
 	return v
 }
 }//class
