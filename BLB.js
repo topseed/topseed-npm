@@ -123,4 +123,4 @@ var BLB = Class.extend({ //IE11-compatible testable 'middle layer' Page Business
 
 // for node:
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
-	module.exports = BLX //node
+	module.exports = BLB //node
