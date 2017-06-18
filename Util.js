@@ -15,7 +15,7 @@ const _slash = '/'
 const pug_options = {}
 pug_options.pretty = true
 
-
+// https://www.npmjs.com/package/topseed-util
 class Util {
 
 	crypt(str, salt) {
@@ -91,6 +91,11 @@ class Util {
 		return target.split(search).join(replacement)
 	}//()
 
+
+
+sendOK(res, html) {
+	res.status(200).send( html ).end()
+}
 
 exists(requestedResource) {
 	return fs.existsSync(requestedResource)
