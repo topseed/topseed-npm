@@ -7,7 +7,7 @@ So here we have some utility functions, used by Topseed projects.
 
 You can use it too. In package.json:
 
-	"topseed-util": ">=17.04"
+	"topseed-util": ">=24.0.0"
 
 Then, in Node:
 
