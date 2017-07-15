@@ -1,5 +1,5 @@
 {
-	"name": "topseed-util"
+	"name": "topseed-utils"
 	,"version": "25.0.0"
 	,"main": "Util.js"
 	,"description": "Used in topseed projects"
